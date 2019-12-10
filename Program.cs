@@ -64,6 +64,33 @@ namespace Metanit_Lessons
 
             //client35.Display();
             //employee35.Display();
+
+        //Generics_36
+
+            Account<int> account1 = new Account<int>();
+            Account<string> account2 = new Account<string>();
+            Account<int> account3 = new Account<int>();
+
+            account1.id = 4567890;
+            account2.id = "4f-eb-76";
+            account3.id = 2367843;
+
+            int xx = 34;
+            int yy = 134;
+
+            Console.WriteLine($"{account1.id} {account2.id}");
+            //Console.ReadKey();
+
+            Transaction<Account<int>, string> operation = new Transaction<Account<int>, string>()
+            {
+                fromAccount = account1,
+                toAccount = account3,
+                code = "45-rf-5657"
+            };
+
+            operation.Swap<int>(ref xx, ref yy);
+            Console.WriteLine($"xx = {xx}, yy = {yy}");
+
         }
     }
 }
