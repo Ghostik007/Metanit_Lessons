@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Metanit_Lessons
 {
-    class Object_34
+    class ObjectConverting_35
     {
         public string Name { get; set; }
 
