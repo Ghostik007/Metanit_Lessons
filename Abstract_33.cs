@@ -26,11 +26,11 @@ namespace Metanit_Lessons
         }
     }
 
-    class Client : Person_33
+    class Client_33 : Person_33
     {     
         public int sum { get; set; }
         
-        public Client(string firstName, string lastName, int sum)
+        public Client_33(string firstName, string lastName, int sum)
             :base(firstName,lastName)
         {
             this.firstName = firstName;

@@ -40,12 +40,30 @@ namespace Metanit_Lessons
             Polimorphism_32 p4 = new Manager("Jack", "McDuglas", "Oracle", "Quality_Assurance(QA)");
             //p4.Display();
 
-            //Abstract_33
-            Person_33 cl = new Client("Jack", "Bean", 3000);
+        //Abstract_33
+            Person_33 cl = new Client_33("Jack", "Bean", 3000);
             Person_33 empl_33 = new Employee_33("Garold", "Thompson", "Manager");
 
-            cl.Display();
-            empl_33.Display();
+            //cl.Display();
+            //empl_33.Display();
+
+        //ObjectConverting_35
+            Person_35 client35 = new Client_35("Old", "Spies", 3000, "Societe General");
+            Person_35 employee35 = new Employee_35("Tik", "Tok", "AccountMan");
+
+            int sum35;// = ((Client_35)client35).sum;
+            Client_35 testClient = employee35 as Client_35;
+            if (testClient != null)
+            {
+                sum35 = testClient.sum;
+                //Console.WriteLine(sum35);
+            }
+            
+            string position35 = ((Employee_35)employee35).position;
+            //Console.WriteLine(position35);
+
+            //client35.Display();
+            //employee35.Display();
         }
     }
 }
